@@ -7,7 +7,7 @@
 			"Grike\\Grike\\" : "src"
 		}
 	},
-	"name" : "Grike/Grike",
+	"name" : "grike/grike",
 	"type" : "Bot",
 	"description" : "Facebook Bot",
 	"require" : {
