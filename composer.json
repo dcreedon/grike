@@ -10,9 +10,8 @@
 	"name" : "grike/grike",
 	"type" : "Bot",
 	"description" : "Facebook Bot",
-	"version" : "@dev",
 	"require" : {
-		"php" : ">=7.0"
+		"php" : "^7.0"
 	},
 	"homepage" : "http://grike.io",
 	"authors" : [{
