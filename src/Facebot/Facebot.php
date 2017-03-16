@@ -1,6 +1,6 @@
 <?php
 
-namespace Facebot;
+namespace Grike;
 
 
 class Facebot

@@ -4,7 +4,7 @@
 	],
 	"autoload" : {
 		"psr-4" : {
-			"Grike\\Grike\\" : "src"
+			"Grike\\" : "src"
 		}
 	},
 	"name" : "grike/grike",
@@ -18,7 +18,7 @@
 			"name" : "Damian Creedon"
 		}
 	],
-	"support" : {
-		"email" : "grike.clint@gmail.com"
-	}
+	"support" : {},
+	"license" : "MIT",
+	"minimum-stability" : "beta"
 }
