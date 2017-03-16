@@ -41,6 +41,24 @@ class Facebot
 		
 	}
 	
+	
+	public function parseRequest($request){
+		
+		$query = $request->getQueryParams();
+		
+		//Subscription Request from FB
+		if ($this->requestType($query) === 'subscribe' ){
+
+			$this->setChallenge($query['hub_challenge']);
+			$this->setHubVerifyToken($query['hub_verify_token']);		
+			$newResponse = $this->subscriptionResponse();			
+		}
+		
+		return $newResponse;
+		
+	}
+	
+
 	public function requestType($query){
 		
 		//$query = $request->getQueryParams();
@@ -48,22 +66,6 @@ class Facebot
 		$requestType = $query['hub_mode'];
 				
 		return $requestType;
-	}
-	
-	public function parseRequest($request){
-		
-		$query = $request->getQueryParams();
-		
-		//Subscription Request from FB
-		if (requestType($query) === 'subscribe' ){
-
-			setChallenge($query['hub_challenge']);
-			setHubVerifyToken($query['hub_verify_token']);		
-			$newResponse = $this->subscriptionResponse();			
-		}
-		
-		return $newResponse;
-		
 	}
 	
 	
