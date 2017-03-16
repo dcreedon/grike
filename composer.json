@@ -13,7 +13,7 @@
 	"require" : {
 		"php" : "^7.0"
 	},
-	"homepage" : "http://grike.io",
+	"homepage" : "https://github.com/dcreedon/grike",
 	"authors" : [{
 			"name" : "Damian Creedon"
 		}
