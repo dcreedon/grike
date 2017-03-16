@@ -13,7 +13,7 @@
 	"require" : {
 		"php" : ">=7.0"
 	},
-	"homepage" : "grike.io",
+	"homepage" : "http://grike.io",
 	"authors" : [{
 			"name" : "Damian Creedon"
 		}
