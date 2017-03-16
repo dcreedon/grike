@@ -42,7 +42,7 @@ class Facebot
 	}
 	
 	
-	public function parseRequest($request){
+	public function parseRequest($request,$response){
 		
 		$query = $request->getQueryParams();
 		
@@ -51,7 +51,7 @@ class Facebot
 
 			$this->setChallenge($query['hub_challenge']);
 			$this->setHubVerifyToken($query['hub_verify_token']);		
-			$newResponse = $this->subscriptionResponse();			
+			$newResponse = $this->subscriptionResponse($response);			
 		}
 		
 		return $newResponse;
@@ -80,15 +80,15 @@ class Facebot
 		return $result;
 	}
 		
-	public function subscriptionResponse(){
+	public function subscriptionResponse($response){
 		
-		if (checkToken(getHubVerifyToken())) {
+		if (checkToken($this->getHubVerifyToken())) {
 		
-			$this->logger->addInfo("Challenge: $challenge");
+			/*$this->logger->addInfo("Challenge: $challenge");*/
 			$body = $response->getBody();
-			$body->write($challenge);
+			$body->write($this->getChallenge());
 			$newResponse = $response->withBody($body);
-		
+			$newResponse = $response-> $this->getChallenge();
 			$newResponse = $response->withStatus(200);
 		}else{
 			$newResponse = $response->withStatus(500);
@@ -111,6 +111,10 @@ class Facebot
 	public function setChallenge($challenge){
 		$this->challenge = $challenge;
 		return $this;
+	}
+	
+	public function getChallenge(){
+		return $this->challenge;
 	}
 
 }
