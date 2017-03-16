@@ -10,7 +10,7 @@
 	"name" : "grike/grike",
 	"type" : "Bot",
 	"description" : "Facebook Bot",
-	"version" : "0.0.1",
+	"version" : "@dev",
 	"require" : {
 		"php" : ">=7.0"
 	},
