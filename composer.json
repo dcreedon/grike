@@ -1,0 +1,24 @@
+{
+	"keywords" : [
+		"Facebook Bot Grike"
+	],
+	"autoload" : {
+		"psr-4" : {
+			"Grike\\Grike\\" : "src"
+		}
+	},
+	"name" : "Grike/Grike",
+	"type" : "Bot",
+	"description" : "Facebook Bot",
+	"require" : {
+		"php" : ">=7.0"
+	},
+	"homepage" : "grike.io",
+	"authors" : [{
+			"name" : "Damian Creedon"
+		}
+	],
+	"support" : {
+		"email" : "grike.clint@gmail.com"
+	}
+}
